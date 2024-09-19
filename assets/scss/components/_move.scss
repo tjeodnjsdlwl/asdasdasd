@@ -1,0 +1,34 @@
+// group-move
+.group-move {
+    position: relative;
+    padding: 218px 0 226px;
+    background-size: cover;
+    --width: 0%;
+    .desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+            font-size: 72px;
+            line-height: 1.28;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 140px;
+        width: var(--width);
+        background-color: #fff;
+    }
+    &::before {
+        top: 0;
+        right: 0;
+    }
+    &::after {
+        bottom: 0;
+        left: 0;
+    }
+}

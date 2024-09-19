@@ -1,0 +1,19 @@
+@mixin colorful($width, $hieght) {
+    position: relative;
+    width: $width;
+    height: $hieght;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#000, #000),
+        linear-gradient(300deg, #e657af, #0049ff, #43cf2e);
+    // origin : 시작점, clip: bg범위 -> IE적용
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    p {
+        background-image: linear-gradient(300deg, #e657af, #0049ff, #43cf2e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+}

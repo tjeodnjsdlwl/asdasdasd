@@ -1,0 +1,96 @@
+// slide-list
+.group-slide {
+    color: #fff;
+    .card-list {
+        display: flex;
+    }
+    .card-item {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 540px;
+        margin-right: 40px;
+        padding: 34px;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        .head {
+            position: relative;
+            height: 110px;
+            flex: 0 0 110px;
+            .title {
+                margin-right: 46px;
+                line-height: 1;
+                font-size: 50px;
+                font-weight: 600;
+                word-break: break-word;
+            }
+            .star {
+                position: absolute;
+                top: 12px;
+                right: 0;
+                font-size: 30px;
+                line-height: 0.67;
+                text-align: right;
+            }
+        }
+        .content {
+            flex: 1;
+        }
+        .bottom {
+            position: relative;
+            flex: 0 0 auto;
+            .text {
+                line-height: 1.67;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            .profile {
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                font-size: 16px;
+                line-height: 1.63;
+                font-weight: 700;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50px;
+                }
+            }
+            [class*="ico-"] {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                display: block;
+            }
+            .ico-minus {
+                background: url(/assets/images/contract-icon.png) no-repeat center/cover;
+            }
+            .ico-expand {
+                background: url(/assets/images/expand-icon.png) no-repeat center/cover;
+            }
+        }
+        &:nth-child(1) {
+            .profile::before {
+                background: #ff009d;
+            }
+        }
+        &:nth-child(2) {
+            .profile::before {
+                background: #0049ff;
+            }
+        }
+        &:nth-child(3) {
+            .profile::before {
+                background: #26ff00;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
